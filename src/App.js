@@ -9,6 +9,7 @@ import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Rank from './components/Rank/Rank';
 import './App.css';
 
+
 const particlesOptions = {
   particles: {
     number: {
@@ -70,6 +71,7 @@ class App extends Component {
     }})
   }
 
+ 
   calculateFaceLocation = (data) => {
     const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
     const image = document.getElementById('inputimage');
@@ -82,6 +84,7 @@ class App extends Component {
       bottomRow: height - (clarifaiFace.bottom_row * height)
     }
   }
+
 
   displayFaceBox = (box) => {
     this.setState({box: box});
